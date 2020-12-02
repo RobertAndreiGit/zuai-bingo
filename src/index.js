@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+import Bingo from './components/Bingo/Bingo';
+
+import './index.css';
+import { CookiesProvider } from 'react-cookie';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <CookiesProvider>
+      <Bingo />
+    </CookiesProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
