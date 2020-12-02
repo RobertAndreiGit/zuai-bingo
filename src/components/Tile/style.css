@@ -1,0 +1,27 @@
+.tile {
+    height: 100%;
+    width: 100%;
+}
+
+.grid-list-tile {
+    border: 1px solid black;
+}
+
+.grid-list-tile div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.tile-clicked::after {
+    content: "X";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    font-size: 100px;
+    position: absolute;
+    color: rgba(0,0,0, 0.5);
+}
