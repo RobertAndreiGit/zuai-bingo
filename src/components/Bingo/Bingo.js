@@ -8,6 +8,7 @@ import { useCookies, withCookies } from 'react-cookie';
 const Bingo = () => {
     const [cookies, setCookie] = useCookies(["order"]);
     var d = new Date();
+    d.setDate(d.getDate() + 1)
     d.setHours(6,0,0,0);
     
     useEffect(() => {
@@ -16,7 +17,7 @@ const Bingo = () => {
             order.sort(() => .5 - Math.random())
             setCookie("order", order, { path: '/', expires: d });
         }
-    }, [cookies, setCookie])
+    }, [cookies, setCookie, d])
 
     return (
         <div className="bingo">
